@@ -21,7 +21,7 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "state")
-    private State state;
+    private BotState botState;
 
     @ManyToOne
     @JoinColumn(name = "chosen_city")

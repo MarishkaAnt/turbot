@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class State {
+public class BotState {
 
     @Id
     @GeneratedValue
