@@ -15,6 +15,14 @@
 > > Password: postgres <br/>
 > > Конфигурация: localhost:5432/postgres <br/>
 
-Для запуска необходимо запустить приложение
+> `Telegram-bot`<br/>
+> > Username:  <br/>
+> > Token:  <br/>
+ 
+> > Конфигурация web-сервиса: localhost:8080<br/>
+
+Для запуска необходимо запустить приложение любым способом:
+1. с помощью IDE, запустив класс src/main/java/com/resliv/turbot/TurbotApplication.java
+2. с помощью запуска war-файла из коммандной строки (mvn package -> java -jar turbot-0.0.1-SNAPSHOT.war)
  
 _п.с. добавляю информацию по ходу разработки_
