@@ -22,7 +22,7 @@
                                  referencedTableSchemaName="turbot"
                                  validate="true"/>
         <addForeignKeyConstraint baseColumnNames="chosen_city"
-                                 baseTableName="cities"
+                                 baseTableName="users"
                                  baseTableSchemaName="turbot"
                                  constraintName="fk_user_chosen_city"
                                  referencedColumnNames="id"
