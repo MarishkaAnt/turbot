@@ -16,7 +16,7 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
-    private Long chat_id;
+    private Long chatId;
     private String name;
 
     @ManyToOne

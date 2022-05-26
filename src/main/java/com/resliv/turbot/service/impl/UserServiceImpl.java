@@ -26,6 +26,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Optional<User> findByChatId(Long id) {
+        return userRepository.findByChatId(id);
+    }
+
+    @Override
     public User create(User user) {
         return userRepository.save(user);
     }

@@ -9,6 +9,7 @@ public interface UserService {
 
     List<User> findAll();
     Optional<User> findById(Long id);
+    Optional<User> findByChatId(Long id);
     User create(User user);
     void delete(User user);
 }
