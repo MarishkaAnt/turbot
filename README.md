@@ -16,8 +16,8 @@
 > > Конфигурация: localhost:5432/postgres <br/>
 
 > `Telegram-bot`<br/>
-> > Username:  <br/>
-> > Token:  <br/>
+> > Username: @bot_TurBot <br/>
+> > токен прописан в TurbotApplication.java
  
 > > Конфигурация web-сервиса: localhost:8080<br/>
 
