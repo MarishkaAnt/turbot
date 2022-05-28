@@ -18,22 +18,28 @@
 		<java.version>11</java.version>
 		<liquibase.version>4.7.1</liquibase.version>
 		<liquibase.plugin.version>4.7.1</liquibase.plugin.version>
+		<lombok.version>1.18.24</lombok.version>
+		<postgresql.version>42.3.6</postgresql.version>
+		<h2db.version>2.1.212</h2db.version>
+		<starter-data-jpa.version>2.7.0</starter-data-jpa.version>
+		<starter-web.version>2.7.0</starter-web.version>
+		<starter-tomcat.version>2.7.0</starter-tomcat.version>
+		<starter-test.version>2.7.0</starter-test.version>
+		<starter-thymeleaf.version>2.7.0</starter-thymeleaf.version>
+		<starter-security.version>2.7.0</starter-security.version>
+		<spring-security-test.version>5.7.1</spring-security-test.version>
 		<telegrambot.version>6.0.1</telegrambot.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${starter-data-jpa.version}</version>
 		</dependency>
-<!--
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
--->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${starter-web.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.liquibase</groupId>
@@ -51,32 +57,53 @@
 			<version>${telegrambot.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<version>${starter-tomcat.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${starter-test.version}</version>
 			<scope>test</scope>
 		</dependency>
-<!--
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2db.version}</version>
 			<scope>test</scope>
 		</dependency>
--->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>${starter-thymeleaf.version}</version>
+		</dependency>
+		<!--
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-security</artifactId>
+                    <version>${starter-security.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-test</artifactId>
+                    <version>${spring-security-test.version}</version>
+                    <scope>test</scope>
+                </dependency>
+        -->
 	</dependencies>
 
 	<build>
