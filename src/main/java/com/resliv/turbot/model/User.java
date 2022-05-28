@@ -20,7 +20,7 @@ public class User {
     private Long id;
     private Long chatId;
     private String name;
-    private Long botState;
+    private int botState;
 
 
     @ManyToOne
