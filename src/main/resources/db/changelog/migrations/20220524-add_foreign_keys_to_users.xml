@@ -13,14 +13,6 @@
                                  referencedTableName="roles"
                                  referencedTableSchemaName="turbot"
                                  validate="true"/>
-        <addForeignKeyConstraint baseColumnNames="state"
-                                 baseTableName="users"
-                                 baseTableSchemaName="turbot"
-                                 constraintName="fk_user_state"
-                                 referencedColumnNames="id"
-                                 referencedTableName="states"
-                                 referencedTableSchemaName="turbot"
-                                 validate="true"/>
         <addForeignKeyConstraint baseColumnNames="chosen_city"
                                  baseTableName="users"
                                  baseTableSchemaName="turbot"
@@ -33,9 +25,6 @@
             <dropForeignKeyConstraint baseTableName="users"
                                       baseTableSchemaName="turbot"
                                       constraintName="fk_user_role"/>
-            <dropForeignKeyConstraint baseTableName="users"
-                                      baseTableSchemaName="turbot"
-                                      constraintName="fk_user_state"/>
             <dropForeignKeyConstraint baseTableName="users"
                                       baseTableSchemaName="turbot"
                                       constraintName="fk_user_chosen_city"/>
