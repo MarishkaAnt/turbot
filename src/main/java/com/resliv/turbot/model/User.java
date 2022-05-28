@@ -2,6 +2,7 @@ package com.resliv.turbot.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -11,17 +12,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Data
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long chatId;
     private String name;
+    private Long botState;
 
-    @ManyToOne
-    @JoinColumn(name = "state")
-    private BotState botState;
 
     @ManyToOne
     @JoinColumn(name = "chosen_city")
