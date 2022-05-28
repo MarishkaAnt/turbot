@@ -10,7 +10,7 @@ public interface UserService {
 
     User findByChatId(Long id);
 
-    User create(User user);
+    User save(User user);
 
     void delete(User user);
 }
