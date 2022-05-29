@@ -12,11 +12,15 @@ public class Bot extends TelegramLongPollingBot {
 
     private final String botName;
     private final String botToken;
-    //Вот здесь проблема, я уже пробовала инжектить, тогда бот падает почему-то
-    //пробовала передавать в конструкторе, но мне нечего передавать, я не могу создать инстанс
-    //т.к. userRepository это интерфейс
-    //UserService userService;
-
+    /* Вот здесь проблема, я уже пробовала инжектить,
+    * тогда бот падает почему-то, если объявить его класс компонентом.
+    * Пробовала передавать в конструкторе, но мне нечего передавать, я не могу создать инстанс сервиса
+    * т.к. для new UserService() нужен userRepository, а это интерфейс и я не могу создать его объект.
+    * Я пробовала автовайрить, но естественно это тоже не получилось.
+    * В общем, не либо я чего-то не понимаю, либо мне просто не хватило времени чтобы разобраться.
+    *
+    * UserService userService;
+    */
 
     public Bot(String name, String token) {
         this.botName = name;
@@ -32,14 +36,16 @@ public class Bot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
 
-        // невозможно работать с чертовой базой данных через userService отсюда.
-        // я сдаюсь!
+        /* невозможно работать с базой данных через userService отсюда.
+        * мне нужно проверить есть ли юзер в БД, затем, если его нет,
+        * засетить его чат-ид, затем уже обрабатывать логику и сообщения.
+        * Но всё уперлось в создание юзерсервиса и я зашла в тупик.
+         */
 
         Long chatId = update.getMessage().getChatId();
         String inputText = update.getMessage().getText();
 
         //userService.findByChatId(chatId);
-
 
         final String GREETINGS = "Привет! Я - туристический бот! " +
                 "Я могу рассказать что-ниудь интересное о разных городах. " +
