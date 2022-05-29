@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "86645304-af80-4105-9812-cdc5abcff535",
+		"name": "Turbot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17854996"
+	},
+	"item": [
+		{
+			"name": "createNewCity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"someCity\",\r\n    \"info\": \"someInfo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/city"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/city/all"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCitiesByExistingName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/city?name=someCity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"city"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "someCity"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCitiesByNotExistingName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/city?name=NotExistingCity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"city"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "NotExistingCity"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCity",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"someCity\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/city/close"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/state/all"
+			},
+			"response": []
+		},
+		{
+			"name": "updateState",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/state/update?state=start&message=Hello! Hi!",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"state",
+						"update"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "start"
+						},
+						{
+							"key": "message",
+							"value": "Hello! Hi!"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
