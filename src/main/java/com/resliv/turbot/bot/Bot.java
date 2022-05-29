@@ -12,7 +12,9 @@ public class Bot extends TelegramLongPollingBot {
 
     private final String botName;
     private final String botToken;
-
+    //Вот здесь проблема, я уже пробовала инжектить, тогда бот падает почему-то
+    //пробовала передавать в конструкторе, но мне нечего передавать, я не могу создать инстанс
+    //т.к. userRepository это интерфейс
     //UserService userService;
 
 
