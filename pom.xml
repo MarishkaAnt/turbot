@@ -19,7 +19,7 @@
 		<liquibase.version>4.8.0</liquibase.version>
 		<liquibase.plugin.version>4.7.1</liquibase.plugin.version>
 		<lombok.version>1.18.24</lombok.version>
-		<postgresql.version>42.3.6</postgresql.version>
+		<postgresql.version>42.4.1</postgresql.version>
 		<h2db.version>2.1.212</h2db.version>
 		<starter-data-jpa.version>2.7.0</starter-data-jpa.version>
 		<starter-web.version>2.7.0</starter-web.version>
